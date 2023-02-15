@@ -1,0 +1,250 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 1.7fr 1.6fr 0.4fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 18em;
+  grid-auto-flow: row;
+  grid-template-areas: "NavBar" "Mid" "Cards" "Footer";
+  max-height: 80rem; }
+
+/*<::::::RESPONSIVE ::::::>*/
+@media screen and (min-width: 992.01px) {
+  .nav-item:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+    display: flex;
+    justify-content: space-between; } }
+
+@media screen and (max-width: 992.01px) {
+  header {
+    max-width: 10rem; }
+  .imag_carr {
+    width: 14rem; }
+  .imag_trj {
+    width: 14rem; }
+  .cesped_trabajo {
+    width: 19rem; }
+  .barra_info {
+    margin-top: 30rem !important; }
+  .img_servicio {
+    width: 20rem; }
+  .Mid {
+    margin-top: 2rem;
+    max-width: 24rem; }
+  body {
+    min-height: 172.2rem; }
+  footer {
+    margin-top: 70rem;
+    max-height: 20rem; }
+  .Cards {
+    flex-wrap: wrap;
+    margin-top: -20rem;
+    margin-bottom: 80rem; }
+  .barra_info_zona {
+    max-width: 100%;
+    margin: auto; }
+  .barra_info {
+    margin: auto; }
+  .imag_trj {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .imag.carr {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .img_nos {
+    width: 30rem;
+    height: 10rem; } }
+
+/*<::::::NAVBAR::::::>*/
+.NavBar {
+  grid-area: NavBar; }
+
+.Nav-Bar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100; }
+
+.navbar {
+  position: static; }
+
+.Mid {
+  grid-area: Mid; }
+
+.Cards {
+  grid-area: Cards; }
+
+/*<::::::BARRA INFO::::::>*/
+.barra_info_zona {
+  margin-top: -2rem;
+  margin-bottom: 8rem;
+  font-style: italic; }
+
+span {
+  font-weight: bold;
+  color: black; }
+
+.barra_info {
+  font-weight: normal; }
+
+/*<::::::SLIDER::::::>*/
+.carousel-inner {
+  box-shadow: 20px 20px 20px 15px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  width: 100%;
+  border: solid #000000 2px;
+  margin-top: 4rem; }
+
+.textoSliderBarco {
+  color: black; }
+
+/*<::::::BACKGROUND::::::>*/
+body {
+  background: url(../imagenes/fondo/fondo.png);
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  border: solid #0c8018 20px;
+  background-size: cover;
+  max-height: 105rem; }
+
+.barra_info_zona {
+  max-width: 100%;
+  background-color: #cecece;
+  background-size: cover;
+  border: solid #000000 2px;
+  font-style: italic; }
+
+/*<::::::FOOTER - GENERAL::::::>*/
+footer {
+  background-color: rgba(202, 240, 212, 0.53);
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  overflow: hidden;
+  font-style: italic; }
+
+/*<::::::TRABAJO::::::>*/
+.trabajos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem; }
+
+.carrito {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem; }
+
+.txt_carrito {
+  position: relative; }
+
+.imag_trj {
+  margin: 1rem;
+  border: solid #000000 2px; }
+
+.imag_carr {
+  margin: 1rem;
+  border: solid #000000 2px; }
+
+.imag_trj:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+  box-shadow: 0 0 20px #3ca02f;
+  text-shadow: 0 0 30px #fff; }
+
+.txt_carrito:active {
+  color: 0; }
+
+.cesped_trabajo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.img_cesped {
+  margin: 2rem;
+  border: solid #000000 2px; }
+
+/*<::::::SERVICIO::::::>*/
+.img_servicio {
+  margin-top: -4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.img_servicio_barco {
+  margin: 2rem;
+  border: solid #000000 2px;
+  margin-top: 8rem; }
+
+.img_servicio_colchon {
+  margin: 2rem;
+  border: solid #000000 2px; }
+
+.img_servicio_barco:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+  box-shadow: 0 0 20px #3ca02f;
+  text-shadow: 0 0 30px #fff; }
+
+.img_servicio_colchon:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+  box-shadow: 0 0 20px #3ca02f;
+  text-shadow: 0 0 30px #fff; }
+
+/*<::::::NOSOTROS::::::>*/
+.contenido_nosotros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center; }
+
+.img_nos {
+  margin-left: 2rem;
+  margin-top: 6rem;
+  border: solid #000000 2px;
+  max-width: 30%;
+  max-height: 20%; }
+
+.img_nos:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+  box-shadow: 0 0 20px #3ca02f;
+  text-shadow: 0 0 30px #fff; }
+
+.barra_info_zona {
+  margin-top: 1rem; }
+
+/*<::::::CARTAS - INICIO::::::>*/
+.Cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-style: italic;
+  margin-top: 5rem; }
+
+.card:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+  box-shadow: 0 0 20px #3ca02f;
+  text-shadow: 0 0 30px #fff; }
+
+.card {
+  box-shadow: 20px 20px 20px 15px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  width: 100%;
+  border: solid #000000 2px; }
+
+.redes_card {
+  font-style: italic;
+  display: flex;
+  width: 30px;
+  height: 40px;
+  align-items: center; }
