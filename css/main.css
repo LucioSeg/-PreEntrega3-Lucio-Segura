@@ -1,250 +1,162 @@
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.3fr 1.7fr 1.6fr 0.4fr;
-  grid-auto-columns: 1fr;
-  gap: 0px 18em;
-  grid-auto-flow: row;
-  grid-template-areas: "NavBar" "Mid" "Cards" "Footer";
-  max-height: 80rem; }
+.body {
+  margin: 0px; }
 
-/*<::::::RESPONSIVE ::::::>*/
-@media screen and (min-width: 992.01px) {
-  .nav-item:hover {
-    transform: scale(1.2);
-    transition: 0.5s;
-    display: flex;
-    justify-content: space-between; } }
-
-@media screen and (max-width: 992.01px) {
-  header {
-    max-width: 10rem; }
-  .imag_carr {
-    width: 14rem; }
-  .imag_trj {
-    width: 14rem; }
-  .cesped_trabajo {
-    width: 19rem; }
-  .barra_info {
-    margin-top: 30rem !important; }
-  .img_servicio {
-    width: 20rem; }
-  .Mid {
-    margin-top: 2rem;
-    max-width: 24rem; }
-  body {
-    min-height: 172.2rem; }
-  footer {
-    margin-top: 70rem;
-    max-height: 20rem; }
-  .Cards {
-    flex-wrap: wrap;
-    margin-top: -20rem;
-    margin-bottom: 80rem; }
-  .barra_info_zona {
-    max-width: 100%;
-    margin: auto; }
-  .barra_info {
-    margin: auto; }
-  .imag_trj {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .imag.carr {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .img_nos {
-    width: 30rem;
-    height: 10rem; } }
-
-/*<::::::NAVBAR::::::>*/
-.NavBar {
-  grid-area: NavBar; }
-
+/*<::::::NavBar::::::>*/
 .Nav-Bar {
+  position: sticky;
+  z-index: 3;
+  top: 0; }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  height: 12vh;
+  background-color: #0c8018; }
+
+.logo {
+  justify-self: start;
+  margin-left: 20px;
+  color: #fff;
+  margin-top: 4vh;
+  cursor: pointer; }
+
+.verCarrito {
+  font-size: 25px;
+  margin-right: 50px;
+  margin-top: 3.5vh;
+  cursor: pointer; }
+
+.verCarrito img {
+  width: 80px;
+  height: 80px; }
+
+/*<::::::BANNER::::::>*/
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background-image: url("fondo2.png"); }
+
+.bannerContainer {
+  text-align: center;
+  padding: 15% 0; }
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); }
+
+.banner p {
+  font-size: 30px;
+  color: white;
+  opacity: 0.7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); }
+
+/*<::::::JS::::::>*/
+.carroHtml {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-left: 80px;
+  margin-right: 80px; }
+
+.carta img {
+  width: 250px;
+  height: 200px; }
+
+.carta {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: Arial; }
+
+.carta button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #0c8018;
+  text-align: center;
+  cursor: pointer;
   width: 100%;
+  font-size: 18px; }
+
+.carta button:hover {
+  opacity: 0.7; }
+
+.precio {
+  color: grey;
+  font-size: 22px; }
+
+/*<::::::CARRITO::::::>*/
+.modal-container {
+  width: 80%;
+  margin: 0 10%;
+  max-height: 88vh;
+  color: white;
+  background-color: #207028;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: fixed;
-  top: 0;
-  z-index: 100; }
+  overflow: auto;
+  z-index: 9;
+  top: 12vh;
+  scrollbar-color: none; }
 
-.navbar {
-  position: static; }
+.modal-container::-webkit-scrollbar {
+  display: none; }
 
-.Mid {
-  grid-area: Mid; }
-
-.Cards {
-  grid-area: Cards; }
-
-/*<::::::BARRA INFO::::::>*/
-.barra_info_zona {
-  margin-top: -2rem;
-  margin-bottom: 8rem;
-  font-style: italic; }
-
-span {
-  font-weight: bold;
-  color: black; }
-
-.barra_info {
-  font-weight: normal; }
-
-/*<::::::SLIDER::::::>*/
-.carousel-inner {
-  box-shadow: 20px 20px 20px 15px rgba(0, 0, 0, 0.25);
-  box-sizing: border-box;
-  width: 100%;
-  border: solid #000000 2px;
-  margin-top: 4rem; }
-
-.textoSliderBarco {
-  color: black; }
-
-/*<::::::BACKGROUND::::::>*/
-body {
-  background: url(../imagenes/fondo/fondo.png);
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-  border: solid #0c8018 20px;
-  background-size: cover;
-  max-height: 105rem; }
-
-.barra_info_zona {
-  max-width: 100%;
-  background-color: #cecece;
-  background-size: cover;
-  border: solid #000000 2px;
-  font-style: italic; }
-
-/*<::::::FOOTER - GENERAL::::::>*/
-footer {
-  background-color: rgba(202, 240, 212, 0.53);
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-  overflow: hidden;
-  font-style: italic; }
-
-/*<::::::TRABAJO::::::>*/
-.trabajos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2rem; }
-
-.carrito {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2rem; }
-
-.txt_carrito {
-  position: relative; }
-
-.imag_trj {
-  margin: 1rem;
-  border: solid #000000 2px; }
-
-.imag_carr {
-  margin: 1rem;
-  border: solid #000000 2px; }
-
-.imag_trj:hover {
-  transform: scale(1.2);
-  transition: 0.5s;
-  box-shadow: 0 0 20px #3ca02f;
-  text-shadow: 0 0 30px #fff; }
-
-.txt_carrito:active {
-  color: 0; }
-
-.cesped_trabajo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; }
-
-.img_cesped {
-  margin: 2rem;
-  border: solid #000000 2px; }
-
-/*<::::::SERVICIO::::::>*/
-.img_servicio {
-  margin-top: -4rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; }
-
-.img_servicio_barco {
-  margin: 2rem;
-  border: solid #000000 2px;
-  margin-top: 8rem; }
-
-.img_servicio_colchon {
-  margin: 2rem;
-  border: solid #000000 2px; }
-
-.img_servicio_barco:hover {
-  transform: scale(1.2);
-  transition: 0.5s;
-  box-shadow: 0 0 20px #3ca02f;
-  text-shadow: 0 0 30px #fff; }
-
-.img_servicio_colchon:hover {
-  transform: scale(1.2);
-  transition: 0.5s;
-  box-shadow: 0 0 20px #3ca02f;
-  text-shadow: 0 0 30px #fff; }
-
-/*<::::::NOSOTROS::::::>*/
-.contenido_nosotros {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center; }
-
-.img_nos {
-  margin-left: 2rem;
-  margin-top: 6rem;
-  border: solid #000000 2px;
-  max-width: 30%;
-  max-height: 20%; }
-
-.img_nos:hover {
-  transform: scale(1.2);
-  transition: 0.5s;
-  box-shadow: 0 0 20px #3ca02f;
-  text-shadow: 0 0 30px #fff; }
-
-.barra_info_zona {
-  margin-top: 1rem; }
-
-/*<::::::CARTAS - INICIO::::::>*/
-.Cards {
+.modal-header {
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  font-style: italic;
-  margin-top: 5rem; }
+  background-color: #065e0f;
+  color: white;
+  width: 100%; }
 
-.card:hover {
-  transform: scale(1.2);
-  transition: 0.5s;
-  box-shadow: 0 0 20px #3ca02f;
-  text-shadow: 0 0 30px #fff; }
+.modalHeaderTitle {
+  justify-self: start; }
 
-.card {
-  box-shadow: 20px 20px 20px 15px rgba(0, 0, 0, 0.25);
-  box-sizing: border-box;
-  width: 100%;
-  border: solid #000000 2px; }
+.modal-header-button {
+  cursor: pointer; }
 
-.redes_card {
-  font-style: italic;
+.modal-container > .modal-content {
   display: flex;
-  width: 30px;
-  height: 40px;
-  align-items: center; }
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin: 10px; }
+
+.modal-container > div > img {
+  height: 120px;
+  width: 120px; }
+
+.total-content {
+  font-size: 25px;
+  padding: 20px;
+  text-align: center;
+  padding-top: 20px; }
+
+.delete-product {
+  cursor: pointer; }
+
+.cantidad-carrito {
+  background-color: #08500f;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 4px;
+  top: 37px;
+  right: 50px;
+  position: absolute;
+  display: none; }
+
+.sumar {
+  cursor: pointer; }
+
+.restar {
+  cursor: pointer; }

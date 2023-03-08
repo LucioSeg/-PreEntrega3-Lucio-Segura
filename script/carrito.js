@@ -1,73 +1,48 @@
-let cepillo = 0;
-let guantes = 0;
-let perfumes = 0;
-let limpias = 0;
-let quitam = 0;
-let barbijos = 0;
-let precio = 0;
-const productos = [
-    { nombre: "Cepillo", precio: 120 },
-    { nombre: "LimpiaTapizados", precio: 80 },
-    { nombre: "Perfume", precio: 60 },
-    { nombre: "Barbijo", precio: 20 },
-    { nombre: "Guantes", precio: 40 },
-    { nombre: "Quitamanchas", precio: 70 },
-];
+const carro = document.getElementById("carroHtml");
+const verCarrito = document.getElementById("verCarrito");
+const modalContainer = document.getElementById("modal-container");
+const cantidadCarrito = document.getElementById("cantidadCarrito");
 
-function cepill() {
-    cepillo = 1 + cepillo;
-    precio = precio + 120;
-}
+let carroJs = JSON.parse(localStorage.getItem("carrito")) || [];
 
-function barbijo() {
-    barbijos = 1 + barbijos;
-    precio = precio + 20;
-}
+productos.forEach((product) => {
+    let content = document.createElement("div");
+    content.className = "carta";
+    content.innerHTML = `
+    <img src ="${product.img}"> 
+    <h3>${product.nombre}</h3>
+    <p class="precio">$ ${product.precio} </p>
+    `;
+    carro.append(content);
+    let comprar = document.createElement("button");
+    comprar.innerText = "Comprar";
+    comprar.className = "comprar";
+    content.append(comprar);
+    comprar.addEventListener("click", () => {
+        const repeat = carroJs.some(
+            (repeatProduct) => repeatProduct.id === product.id
+        );
+        if (repeat) {
+            carroJs.map((prod) => {
+                if (prod.id === product.id) {
+                    prod.cantidad++;
+                }
+            });
+        } else {
+            carroJs.push({
+                id: product.id,
+                img: product.img,
+                nombre: product.nombre,
+                precio: product.precio,
+                cantidad: product.cantidad,
+            });
+            carritoCounter();
+            saveLocal();
+        }
+    });
+});
+const saveLocal = () => {
+    localStorage.setItem("carrito", JSON.stringify(carroJs));
+};
 
-function limpia() {
-    limpias = 1 + limpias;
-    precio = precio + 80;
-}
-
-function perfume() {
-    perfumes = 1 + perfumes;
-    precio = precio + 60;
-}
-
-function quita() {
-    quitam = 1 + quitam;
-    precio = precio + 70;
-}
-
-function guante() {
-    guantes = 1 + guantes;
-    precio = precio + 30;
-}
-function Calcular() {
-    alert(
-        "El costo total de su compra es de: $" +
-            precio +
-            ". Esta incluye: " +
-            guantes +
-            " Guantes, " +
-            perfumes +
-            " Perfumes, " +
-            quitam +
-            " Quitamanchas, " +
-            limpias +
-            " LimpiaTapizados, " +
-            barbijos +
-            " Barbijos y " +
-            cepillo +
-            " Cespillos"
-    );
-}
-function Borrar() {
-    cepillo = 0;
-    guantes = 0;
-    perfumes = 0;
-    limpias = 0;
-    quitam = 0;
-    barbijos = 0;
-    precio = 0;
-}
+JSON.parse(localStorage.getItem("carrito"));
